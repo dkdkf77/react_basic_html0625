@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            
+            width: 200px;
+            height: 200px;
+            opacity: 1;
+            font-size: 50px;
+            background-color: rgba(254, 214, 134, 1);
+            color: #302b2b;
+            transition: all 2s;
+            margin:300px auto
+        }
+
+
+        .btn:hover + .box1{
+            transform: translate(300px, 200px) scale(2);
+            border-radius: 50%;
+            background-color: aquamarine;
+        }
+        /* 현재 위치에서 상대적으로 이동 */
+
+        .box2 {
+            transform: translateX(200px);
+        }
+
+        
+        .box3 {
+            transform: translateY(0px);
+        }
+
+        /* 현재값에서의 배율조절 - 크기 조절 */
+        .box4 {
+            transform: scale(2);
+        }
+        .box5 {
+            transform: scaleX(2);
+        }
+
+        .box6 {
+            transform: scaleY(2);
+        }
+        /* 회전  */
+        .box7_in {
+            margin: 0px;
+            width: 200px;
+            height: 200px;
+            transform: rotate(45deg);
+            background-color: aqua;
+            border: 1px solid black;
+        }
+        .box8_in {
+            margin: 0px;
+            width: 200px;
+            height: 200px;
+            transform: rotateX(85deg);
+            background-color: aqua;
+            border: 1px solid black;
+        }
+        .box9_in {
+            margin: 0px;
+            width: 200px;
+            height: 200px;
+            transform: rotateY(0deg);
+            background-color: aqua;
+            border: 1px solid black;
+            transition: all 2s;
+        }
+
+        .box9_in:hover {
+            transform: rotateY(360deg);
+            background-color: bisque;
+        }
+        /* 기울기 */
+        .box10_in {
+            margin:0;
+            background-color: #fff;
+            border: 1px solid black;
+            transition: all 2s;
+        }
+
+        .box10_in:hover{
+            transform: skew(30deg, 30deg);
+        }
+
+        .box11_in {
+            margin:0;
+            background-color: #fff;
+            border: 1px solid black;
+            transform: skewX(30deg);
+        }
+        .box12_in {
+            margin:0;
+            background-color: #fff;
+            border: 1px solid black;
+            transform: skewY(30deg);
+        }
+
+
+    </style>
+</head>
+<body>
+    <button class="btn">over</button>
+    <div class="box box1" >
+        box1
+    </div>
+    <!-- /* 현재 위치에서 상대적으로 이동 */ -->
+    <button class="btn2">over</button>
+    <div class="box box2" >
+        box2
+    </div>
+    <div class="box box3" >
+        box3
+    </div>
+    <!-- /* 현재값에서의 배율조절 - 크기 조절 */ -->
+    <div class="box box4" >
+        box4
+    </div>
+    <div class="box box5" >
+        box5
+    </div>
+    <!-- /* 회전  */ -->
+    <div class="box box6" >
+        box6
+    </div>
+    <div class="box box7" >
+        <div class="box7_in">box7_in</div>
+    </div>
+    <div class="box box8" >
+        <div class="box8_in">box8_in</div>
+    </div>
+    <div class="box box9" >
+        <div class="box9_in">box9_in</div>
+    </div>
+    <!-- 기울기 -->
+
+    <div class="box box10" >
+        <div class="box10_in">box10_in</div>
+    </div>
+
+    <div class="box box11" >
+        <div class="box11_in">box11_in</div>
+    </div>
+    <div class="box box12" >
+        <div class="box12_in">box12_in</div>
+    </div>
+</body>
+</html>

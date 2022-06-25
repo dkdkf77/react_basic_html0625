@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            margin-bottom: 30px;
+            width: 200px;
+            height: 200px;
+            opacity: .5;
+            background-color: rgba(254, 214, 134, 0.2);
+            box-shadow: 0px 0px 5px 5px rgba(156, 86, 86, 0.7);
+            transition: all 3s;
+            transition-delay: 1s; /* 1초의 대기시간 */
+            transition-duration: 0.7s;
+            transition-property: all;
+            transition-timing-function: ease-in-out;
+        }
+        /* 자기 자신에게 애니메이션 적용할때 
+            .box:hover{
+            width: 500px;
+            box-shadow: 5px 5px 5px 5px rgba(156, 86, 86, 0.7);
+            
+        } */
+
+        /* 자신의 자식요소에 애니메이션 적용 */
+        /* .box_in {
+            width: 200px;
+            height: 200px;
+            border: 5px solid #000;
+            background-color: blueviolet;
+            box-sizing: border-box;
+            transition: all 0.7s;
+        }
+        .box:hover .box_in {
+            transform: rotate(360deg);
+            background-color: blue;
+        } */
+        /* 자신의 바로 옆에 요소 */
+        /* .box2 {
+            transition: all 1s;
+        }
+        .box:hover + .box2 {
+            width: 1000px;
+        } */
+        .box3 {
+            transition-delay: 1s;
+            transition-duration: 2s;
+            transition-timing-function: ease-in-out;
+            transition-property: all;
+        }
+
+        .box:hover ~ .box3 {
+            width: 1000px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!-- <div class="box_in"></div> -->
+    </div>
+    <div class="box box2">
+        box2
+    </div>
+    <div class="box box3">
+        box3
+    </div>
+    <div class="box box4">
+        box4
+    </div>
+</body>
+</html>
